@@ -77,7 +77,61 @@
 </nav>
 
 <main>
-<h2>How to Play</h2><p>Use the arrow keys to move through the sky while free falling. Hover over the correct math answer blocks to land safely. You have 10 questions — choose carefully to win!</p>
+
+<h2>How to Play - Mobile Edition</h2>
+<p>This is the mobile version of the Free Fall Math game that automatically detects mobile devices and provides a touch-friendly interface.</p>
+
+<h3>Features</h3>
+<ul>
+  <li>Automatic device detection (mobile vs. desktop)</li>
+  <li>Touch-optimized controls with virtual D-pad</li>
+  <li>Responsive UI design that adapts to different screen sizes</li>
+  <li>Same gameplay experience as the desktop version</li>
+</ul>
+
+<h3>Gameplay Steps</h3>
+<ol>
+  <li>When a player joins, the game automatically detects if they're on a mobile device</li>
+  <li>Mobile players will see a touch-friendly interface with a virtual D-pad</li>
+  <li>Solve math problems by navigating to the block with the correct answer</li>
+  <li>Complete 10 questions to finish the game</li>
+</ol>
+
+<h3>Running the Mobile Version</h3>
+<p>To run the mobile version of the game:</p>
+<ul>
+  <li>Download the Hytopia app</li>
+  <li>Choose the Free Fall game</li>
+  <li>Select a server</li>
+  <li>Tap Play Game</li>
+</ul>
+
+<h3>Technical Details</h3>
+<ul>
+  <li>Device detection using browser features (touch support, screen size, etc.)</li>
+  <li>Optimized UI layout for smaller screens</li>
+  <li>Touch controls for navigation</li>
+  <li>Responsive design with CSS media queries</li>
+</ul>
+
+<h3>Implementation Notes</h3>
+<ul>
+  <li>Mobile-specific UI is loaded only for mobile devices</li>
+  <li>Desktop players still get the regular interface</li>
+  <li>Game logic remains the same for both versions</li>
+  <li>Detection happens client-side using web features</li>
+</ul>
+
+<h3>Required Assets</h3>
+<p>For the mobile UI to work properly, you need to add the following icons to the <code>assets/icons</code> directory:</p>
+<ul>
+  <li>arrow-up.png</li>
+  <li>arrow-down.png</li>
+  <li>arrow-left.png</li>
+  <li>arrow-right.png</li>
+</ul>
+<p>You can use simple triangle shapes with a transparent background. Each icon should be about 24x24 pixels in size.</p>
+
 </main>
 <footer>
   © 2025 Free Fall Game | Created by Chris Campbell
