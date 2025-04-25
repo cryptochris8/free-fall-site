@@ -2,83 +2,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Free Fall</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Fall - Home</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #121212;
-      color: #fff;
       margin: 0;
-      padding: 0;
+      background-color: #121212;
+      color: #EEEEEE;
+      font-family: Arial, sans-serif;
     }
-    header {
-      background-color: #1f1f1f;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 2px solid #444;
+    header, footer {
+      background-color: #1E1E1E;
+      padding: 1em 2em;
     }
     header h1 {
       margin: 0;
-      font-size: 2em;
+      font-size: 1.8em;
     }
-    nav {
-      background-color: #292929;
+    nav ul {
+      list-style: none;
       display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 15px 0;
-      border-bottom: 1px solid #444;
+      gap: 1em;
+      margin: 0;
+      padding: 0;
     }
     nav a {
-      color: #00d8ff;
+      color: #CCCCCC;
       text-decoration: none;
       font-weight: bold;
     }
     nav a:hover {
-      text-decoration: underline;
+      color: #FFFFFF;
     }
     main {
-      padding: 30px;
+      max-width: 800px;
+      margin: 2em auto;
+      padding: 1em;
       text-align: center;
     }
     iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 340px;
+      border: none;
+    }
+    img {
       margin-top: 20px;
-      max-width: 100%;
+      width: 80%;
+      max-width: 500px;
+      border-radius: 8px;
     }
     footer {
       text-align: center;
-      padding: 20px;
-      background-color: #1f1f1f;
-      border-top: 1px solid #444;
-      color: #aaa;
       font-size: 0.9em;
+      color: #AAAAAA;
+    }
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Welcome to Free Fall!</h1>
-    <p>Engaging arithmetic adventure. Start playing or explore lesson plans below!</p>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <h1>Free Fall</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="how-to-play.html">How to Play</a></li>
+          <li><a href="lesson-plans.html">Lesson Plans</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="how-to-play.html">How to Play</a>
-    <a href="lesson-plans.html">Lesson Plans</a>
-    <a href="media.html">Media</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
   <main>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/rU0u6ZqI5oI" 
-      title="Free Fall Gameplay" frameborder="0" allowfullscreen></iframe>
+    <h2>Welcome to Free Fall!</h2>
+    <p>Engage in an exciting arithmetic adventure. Watch the gameplay video below!</p>
+    <iframe src="https://www.youtube.com/embed/rU0u6ZqI5oI" title="Free Fall Gameplay" allowfullscreen></iframe>
+    <div>
+      <img src="0A606226-175A-4637-A7EC-AF32F767E9E2.png" alt="Free Fall Logo Poster">
+    </div>
   </main>
 
   <footer>
-    © 2025 Free Fall Game | Created by Chris Campbell
+    &copy; 2025 Free Fall Game | Created by Chris Campbell
   </footer>
+
+  <!-- Hidden Netlify Trigger Form -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <textarea name="message"></textarea>
+  </form>
 
 </body>
 </html>
