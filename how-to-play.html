@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>How to Play</title>
+  <title>How to Play - Free Fall</title>
   <style>
     body {
       background-color: #121212;
@@ -33,15 +33,25 @@
       padding: 20px;
       width: 90%;
       max-width: 800px;
-      text-align: center;
     }
-    h1 {
-      margin-top: 20px;
+    h1, h2 {
+      text-align: center;
       font-size: 2.5rem;
     }
-    p {
+    h3 {
+      margin-top: 30px;
+      color: #00bfff;
+    }
+    p, li {
       font-size: 1.2rem;
       line-height: 1.6;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    ol {
+      padding-left: 20px;
     }
   </style>
 </head>
@@ -58,7 +68,59 @@
 
 <main>
   <h1>How to Play Free Fall</h1>
-  <p>Use arrow keys to move mid-air. Choose correct math answers to land safely!</p>
+
+  <h3>Free Fall Math Game - Mobile Edition</h3>
+  <p>This is the mobile version of the Free Fall Math game that automatically detects mobile devices and provides a touch-friendly interface.</p>
+
+  <h3>Features</h3>
+  <ul>
+    <li>Automatic device detection (mobile vs. desktop)</li>
+    <li>Touch-optimized controls with virtual D-pad</li>
+    <li>Responsive UI design that adapts to different screen sizes</li>
+    <li>Same gameplay experience as the desktop version</li>
+  </ul>
+
+  <h3>How to Play</h3>
+  <ol>
+    <li>When a player joins, the game automatically detects if they're on a mobile device</li>
+    <li>Mobile players will see a touch-friendly interface with a virtual D-pad</li>
+    <li>Solve math problems by navigating to the block with the correct answer</li>
+    <li>Complete 10 questions to finish the game</li>
+  </ol>
+
+  <h3>Running the Mobile Version</h3>
+  <ul>
+    <li>Download Hytopia app</li>
+    <li>Choose Free Fall game</li>
+    <li>Choose server</li>
+    <li>Select play game</li>
+  </ul>
+
+  <h3>Technical Details</h3>
+  <ul>
+    <li>Device detection using browser features (touch support, screen size, etc.)</li>
+    <li>Optimized UI layout for smaller screens</li>
+    <li>Touch controls for navigation</li>
+    <li>Responsive design with CSS media queries</li>
+  </ul>
+
+  <h3>Implementation Notes</h3>
+  <ul>
+    <li>Mobile-specific UI is loaded only for mobile devices</li>
+    <li>Desktop players still get the regular interface</li>
+    <li>Game logic remains the same for both versions</li>
+    <li>Detection happens client-side using web features</li>
+  </ul>
+
+  <h3>Required Assets</h3>
+  <p>For the mobile UI to work properly, you need to add the following icons to the <code>assets/icons</code> directory:</p>
+  <ul>
+    <li><code>arrow-up.png</code> - Arrow icon for the up direction</li>
+    <li><code>arrow-down.png</code> - Arrow icon for the down direction</li>
+    <li><code>arrow-left.png</code> - Arrow icon for the left direction</li>
+    <li><code>arrow-right.png</code> - Arrow icon for the right direction</li>
+  </ul>
+  <p>Each icon should be approximately 24x24 pixels in size with a transparent background.</p>
 </main>
 
 </body>
