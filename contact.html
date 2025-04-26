@@ -2,153 +2,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Contact - Free Fall</title>
-  <style>
-    body {
-      margin: 0;
-      background-color: #121212;
-      color: #EEEEEE;
-      font-family: Arial, sans-serif;
-    }  
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    header, footer {
-      background-color: #1E1E1E;
-      padding: 1em 2em;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 1.5em;
-    }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 1em;
-    }
-    nav a {
-      color: #CCCCCC;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      color: #FFFFFF;
-    }
-    nav a.active {
-      border-bottom: 2px solid #FFFFFF;
-    }
-    main {
-      max-width: 600px;
-      margin: 2em auto;
-      padding: 0 1em;
-    }
-    label {
-      display: block;
-      margin: 0.5em 0 0.2em;
-    }
-    input[type="text"], 
-    input[type="email"], 
-    textarea {
-      width: 100%;
-      padding: 0.75em;
-      margin-bottom: 1em;
-      border: 1px solid #444;
-      border-radius: 4px;
-      background-color: #1E1E1E;
-      color: #FFFFFF;
-      box-sizing: border-box;
-    }
-    input::placeholder,
-    textarea::placeholder {
-      color: #888;
-    }
-    input:focus, textarea:focus {
-      outline: none;
-      border-color: #4CAF50;
-    }
-    button[type="submit"] {
-      background-color: #4CAF50;
-      color: #FFFFFF;
-      padding: 0.75em 1.5em;
-      border: none;
-      border-radius: 4px;
-      font-size: 1em;
-      cursor: pointer;
-    }
-    button[type="submit"]:hover {
-      background-color: #45a049;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9em;
-      color: #AAAAAA;
-      padding: 1em;
-    }
-    @media (max-width: 600px) {
-      nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      nav li {
-        margin: 0.5em 0;
-      }
-      .header-content {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-  </style>
 </head>
 <body>
+  <h1>Contact Us</h1>
 
-  <header>
-    <div class="header-content">
-      <h1>Free Fall</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="how-to-play.html">How to Play</a></li>
-          <li><a href="lesson-plans.html">Lesson Plans</a></li>
-          <li><a href="media.html">Media</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <form name="contact" method="POST" data-netlify="true" onsubmit="showSuccess(event)">
+    <p>
+      <label>Your Name: <input type="text" name="name" required /></label>
+    </p>
+    <p>
+      <label>Your Email: <input type="email" name="email" required /></label>
+    </p>
+    <p>
+      <label>Message: <textarea name="message" required></textarea></label>
+    </p>
+    <p>
+      <button type="submit">Send</button>
+    </p>
+  </form>
 
-  <main>
-    <h2>Contact Us</h2>
-    <p>If you have any questions or comments, please fill out the form below and we'll get back to you shortly.</p>
-    <form name="contact" method="POST" action="thank-you.html" data-netlify="true" data-netlify-honeypot="bot-field">
-      <p style="display:none;">
-        <label>Don't fill this out: <input name="bot-field" type="text" /></label>
-      </p>
-      <input type="hidden" name="form-name" value="contact" />
+  <script>
+    function showSuccess(event) {
+      event.preventDefault();
+      const form = event.target;
+      const data = new FormData(form);
 
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" placeholder="Your name" required />
-
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Your email address" required />
-
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
-  </main>
-
-  <footer>
-    &copy; 2025 Free Fall. All rights reserved.
-  </footer>
+      fetch("/", {
+        method: "POST",
+        body: data
+      }).then(() => {
+        alert("✅ Thank you! Your message has been submitted.");
+        form.reset();
+      }).catch(() => {
+        alert("❌ Oops! Something went wrong. Please try again.");
+      });
+    }
+  </script>
 
 </body>
 </html>
