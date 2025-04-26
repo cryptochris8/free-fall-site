@@ -11,9 +11,6 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       min-height: 100vh;
     }
     nav {
@@ -22,7 +19,6 @@
       display: flex;
       justify-content: center;
       gap: 30px;
-      width: 100%;
     }
     nav a {
       color: #00bfff;
@@ -32,17 +28,20 @@
     nav a:hover {
       color: #66d9ff;
     }
+    main {
+      margin: 40px auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 800px;
+      text-align: center;
+    }
     h1 {
       margin-top: 20px;
       font-size: 2.5rem;
     }
-    main {
-      margin-top: 20px;
-      text-align: center;
-    }
-    img {
-      margin-top: 20px;
-      width: 300px;
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
     }
   </style>
 </head>
@@ -50,18 +49,20 @@
 
 <nav>
   <a href="/index.html">Home</a>
+  <a href="/about.html">About</a>
   <a href="/how-to-play.html">How to Play</a>
   <a href="/lesson-plans.html">Lesson Plans</a>
   <a href="/media.html">Media</a>
   <a href="/contact.html">Contact</a>
 </nav>
 
-<h1>Welcome to Free Fall!</h1>
-
 <main>
-  <img src="freefall-logo.png" alt="Free Fall Logo">
-  <p>Engaging arithmetic adventure. Start playing or explore lesson plans below!</p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/rU0u6ZqI5oI" title="Free Fall Gameplay" frameborder="0" allowfullscreen></iframe>
+  <h1>Welcome to Free Fall!</h1>
+  
+        <img src="freefall-logo.png" alt="Free Fall Logo" style="margin-top:20px;width:300px;"><br><br>
+        <p>Engaging arithmetic adventure. Start playing or explore lesson plans below!</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/rU0u6ZqI5oI" title="Free Fall Gameplay" frameborder="0" allowfullscreen></iframe>
+        
 </main>
 
 </body>

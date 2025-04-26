@@ -6,169 +6,60 @@
   <title>How to Play</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       background-color: #121212;
-      color: #fff;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-    }
-    header {
-      background-color: #1f1f1f;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 2px solid #444;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2em;
+      min-height: 100vh;
     }
     nav {
-      background-color: #292929;
+      background: #1e1e1e;
+      padding: 10px 0;
       display: flex;
       justify-content: center;
       gap: 30px;
-      padding: 15px 0;
-      border-bottom: 1px solid #444;
     }
     nav a {
-      color: #00d8ff;
+      color: #00bfff;
       text-decoration: none;
-      font-weight: bold;
+      font-size: 1.1rem;
     }
     nav a:hover {
-      text-decoration: underline;
+      color: #66d9ff;
     }
     main {
-      padding: 30px;
+      margin: 40px auto;
+      padding: 20px;
+      width: 90%;
       max-width: 800px;
-      margin: auto;
-    }
-    footer {
       text-align: center;
-      padding: 20px;
-      background-color: #1f1f1f;
-      border-top: 1px solid #444;
-      color: #aaa;
-      font-size: 0.9em;
-      margin-top: 40px;
     }
-    ul li {
-      margin: 10px 0;
+    h1 {
+      margin-top: 20px;
+      font-size: 2.5rem;
     }
-    img {
-      margin: 10px;
-      max-width: 100%;
-      height: auto;
-    }
-    form {
-      background-color: #1f1f1f;
-      padding: 20px;
-      border: 1px solid #444;
-      border-radius: 10px;
-    }
-    label {
-      display: block;
-      margin-top: 10px;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 5px;
-      border: 1px solid #555;
-      background-color: #292929;
-      color: #fff;
-    }
-    button {
-      margin-top: 15px;
-      padding: 10px 20px;
-      background-color: #00d8ff;
-      color: #121212;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #00b3cc;
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>How to Play</h1>
-</header>
-
 <nav>
-  <a href="index.html">Home</a>
-  <a href="how-to-play.html">How to Play</a>
-  <a href="lesson-plans.html">Lesson Plans</a>
-  <a href="media.html">Media</a>
-  <a href="contact.html">Contact</a>
+  <a href="/index.html">Home</a>
+  <a href="/about.html">About</a>
+  <a href="/how-to-play.html">How to Play</a>
+  <a href="/lesson-plans.html">Lesson Plans</a>
+  <a href="/media.html">Media</a>
+  <a href="/contact.html">Contact</a>
 </nav>
 
 <main>
-
-<h2>How to Play - Mobile Edition</h2>
-<p>This is the mobile version of the Free Fall Math game that automatically detects mobile devices and provides a touch-friendly interface.</p>
-
-<h3>Features</h3>
-<ul>
-  <li>Automatic device detection (mobile vs. desktop)</li>
-  <li>Touch-optimized controls with virtual D-pad</li>
-  <li>Responsive UI design that adapts to different screen sizes</li>
-  <li>Same gameplay experience as the desktop version</li>
-</ul>
-
-<h3>Gameplay Steps</h3>
-<ol>
-  <li>When a player joins, the game automatically detects if they're on a mobile device</li>
-  <li>Mobile players will see a touch-friendly interface with a virtual D-pad</li>
-  <li>Solve math problems by navigating to the block with the correct answer</li>
-  <li>Complete 10 questions to finish the game</li>
-</ol>
-
-<h3>Running the Mobile Version</h3>
-<p>To run the mobile version of the game:</p>
-<ul>
-  <li>Download the Hytopia app</li>
-  <li>Choose the Free Fall game</li>
-  <li>Select a server</li>
-  <li>Tap Play Game</li>
-</ul>
-
-<h3>Technical Details</h3>
-<ul>
-  <li>Device detection using browser features (touch support, screen size, etc.)</li>
-  <li>Optimized UI layout for smaller screens</li>
-  <li>Touch controls for navigation</li>
-  <li>Responsive design with CSS media queries</li>
-</ul>
-
-<h3>Implementation Notes</h3>
-<ul>
-  <li>Mobile-specific UI is loaded only for mobile devices</li>
-  <li>Desktop players still get the regular interface</li>
-  <li>Game logic remains the same for both versions</li>
-  <li>Detection happens client-side using web features</li>
-</ul>
-
-<h3>Required Assets</h3>
-<p>For the mobile UI to work properly, you need to add the following icons to the <code>assets/icons</code> directory:</p>
-<ul>
-  <li>arrow-up.png</li>
-  <li>arrow-down.png</li>
-  <li>arrow-left.png</li>
-  <li>arrow-right.png</li>
-</ul>
-<p>You can use simple triangle shapes with a transparent background. Each icon should be about 24x24 pixels in size.</p>
-
+  <h1>How to Play Free Fall</h1>
+  <p>Use arrow keys to move mid-air. Choose correct math answers to land safely!</p>
 </main>
-
-<footer>
-  © 2025 Free Fall Game | Created by Chris Campbell
-</footer>
 
 </body>
 </html>
