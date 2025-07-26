@@ -1,127 +1,159 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How to play Free Fall - Quick start guide and controls for the math adventure game.">
   <title>How to Play - Free Fall</title>
-  <style>
-    body {
-      background-color: #121212;
-      color: #ffffff;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-    }
-    nav {
-      background: #1e1e1e;
-      padding: 10px 0;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-    }
-    nav a {
-      color: #00bfff;
-      text-decoration: none;
-      font-size: 1.1rem;
-    }
-    nav a:hover {
-      color: #66d9ff;
-    }
-    main {
-      margin: 40px auto;
-      padding: 20px;
-      width: 90%;
-      max-width: 800px;
-    }
-    h1, h2 {
-      text-align: center;
-      font-size: 2.5rem;
-    }
-    h3 {
-      margin-top: 30px;
-      color: #00bfff;
-    }
-    p, li {
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
-    ol {
-      padding-left: 20px;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <nav>
-  <a href="/index.html">Home</a>
-  <a href="/about.html">About</a>
-  <a href="/how-to-play.html">How to Play</a>
-  <a href="/lesson-plans.html">Lesson Plans</a>
-  <a href="/media.html">Media</a>
-  <a href="/contact.html">Contact</a>
+  <div class="nav-container">
+    <a href="/" class="nav-logo">
+      <img src="logo-new-1.png" alt="Free Fall Logo">
+      <span>Free Fall</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="how-to-play.html" class="active">How to Play</a>
+      <a href="lesson-plans.html">Resources</a>
+      <a href="media.html">Media</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://hytopia.com/games/freefall/" target="_blank" class="btn btn-primary" style="margin-left: 1rem; padding: 0.5rem 1.5rem; font-size: 0.9rem;">Play Game</a>
+    </div>
+    <button class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
 </nav>
 
 <main>
-  <h1>How to Play Free Fall</h1>
-
-  <h3>Free Fall Math Game - Mobile Edition</h3>
-  <p>This is the mobile version of the Free Fall Math game that automatically detects mobile devices and provides a touch-friendly interface.</p>
-
-  <h3>Features</h3>
-  <ul>
-    <li>Automatic device detection (mobile vs. desktop)</li>
-    <li>Touch-optimized controls with virtual D-pad</li>
-    <li>Responsive UI design that adapts to different screen sizes</li>
-    <li>Same gameplay experience as the desktop version</li>
-  </ul>
-
-  <h3>How to Play</h3>
-  <ol>
-    <li>When a player joins, the game automatically detects if they're on a mobile device</li>
-    <li>Mobile players will see a touch-friendly interface with a virtual D-pad</li>
-    <li>Solve math problems by navigating to the block with the correct answer</li>
-    <li>Complete 10 questions to finish the game</li>
-  </ol>
-
-  <h3>Running the Mobile Version</h3>
-  <ul>
-    <li>Download Hytopia app</li>
-    <li>Choose Free Fall game</li>
-    <li>Choose server</li>
-    <li>Select play game</li>
-  </ul>
-
-  <h3>Technical Details</h3>
-  <ul>
-    <li>Device detection using browser features (touch support, screen size, etc.)</li>
-    <li>Optimized UI layout for smaller screens</li>
-    <li>Touch controls for navigation</li>
-    <li>Responsive design with CSS media queries</li>
-  </ul>
-
-  <h3>Implementation Notes</h3>
-  <ul>
-    <li>Mobile-specific UI is loaded only for mobile devices</li>
-    <li>Desktop players still get the regular interface</li>
-    <li>Game logic remains the same for both versions</li>
-    <li>Detection happens client-side using web features</li>
-  </ul>
-
-  <h3>Required Assets</h3>
-  <p>For the mobile UI to work properly, you need to add the following icons to the <code>assets/icons</code> directory:</p>
-  <ul>
-    <li><code>arrow-up.png</code> - Arrow icon for the up direction</li>
-    <li><code>arrow-down.png</code> - Arrow icon for the down direction</li>
-    <li><code>arrow-left.png</code> - Arrow icon for the left direction</li>
-    <li><code>arrow-right.png</code> - Arrow icon for the right direction</li>
-  </ul>
-  <p>Each icon should be approximately 24x24 pixels in size with a transparent background.</p>
+  <section class="section">
+    <div class="container">
+      <h1 class="section-title animate-on-scroll">How to Play Free Fall</h1>
+      <p class="section-subtitle animate-on-scroll">Jump right into the action!</p>
+      
+      <!-- Play Now CTA -->
+      <div class="card animate-on-scroll" style="max-width: 800px; margin: 0 auto 3rem; text-align: center; background: linear-gradient(135deg, var(--bg-card) 0%, #2a2a2a 100%);">
+        <div class="card-icon" style="margin: 0 auto 1.5rem; width: 100px; height: 100px; font-size: 3rem;">🎮</div>
+        <h2 style="margin-bottom: 1rem;">Play Free Fall on Hytopia</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem;">Free Fall is now live on Hytopia! Click below to start your mathematical adventure.</p>
+        <a href="https://hytopia.com/games/freefall/" class="btn btn-primary" target="_blank" style="font-size: 1.3rem; padding: 1.2rem 3rem;">
+          Play Free Fall Now
+        </a>
+        <p style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem;">No download required - plays directly in your browser!</p>
+      </div>
+      
+      <!-- Quick Start Guide -->
+      <div class="grid grid-2" style="gap: 3rem; margin-bottom: 3rem;">
+        <div class="card animate-on-scroll">
+          <h3>🕹️ Controls</h3>
+          <div style="margin-top: 1.5rem;">
+            <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Desktop:</h4>
+            <ul style="color: var(--text-secondary);">
+              <li><strong>W/A/S/D</strong> or <strong>Arrow Keys</strong> - Move horizontally</li>
+              <li><strong>Mouse</strong> - Look around</li>
+              <li><strong>Space</strong> - Use power-up</li>
+            </ul>
+            
+            <h4 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">Mobile:</h4>
+            <ul style="color: var(--text-secondary);">
+              <li><strong>Touch & Drag</strong> - Move horizontally</li>
+              <li><strong>Tap Power-up Icon</strong> - Activate power-up</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="card animate-on-scroll">
+          <h3>🎯 Objective</h3>
+          <ol style="color: var(--text-secondary); margin-top: 1.5rem;">
+            <li>Look at the math problem at the top of your screen</li>
+            <li>Find the numbered block with the correct answer</li>
+            <li>Guide your character to fall through that block</li>
+            <li>Answer 10 questions correctly to complete the level</li>
+            <li>Collect power-ups to help you along the way!</li>
+          </ol>
+        </div>
+      </div>
+      
+      <!-- Game Tips -->
+      <div style="background: var(--bg-card); padding: 3rem; border-radius: 20px; margin-bottom: 3rem;" class="animate-on-scroll">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Pro Tips for Success</h2>
+        <div class="grid grid-3">
+          <div style="text-align: center;">
+            <div class="card-icon" style="margin: 0 auto 1rem;">💡</div>
+            <h4>Think Fast</h4>
+            <p>Solve problems quickly as gravity increases with each correct answer!</p>
+          </div>
+          <div style="text-align: center;">
+            <div class="card-icon" style="margin: 0 auto 1rem;">🎯</div>
+            <h4>Aim Carefully</h4>
+            <p>Line up your fall early - it's harder to change direction as you speed up</p>
+          </div>
+          <div style="text-align: center;">
+            <div class="card-icon" style="margin: 0 auto 1rem;">⚡</div>
+            <h4>Use Power-ups Wisely</h4>
+            <p>Save power-ups for difficult questions or when falling too fast</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Difficulty Modes Reminder -->
+      <div class="animate-on-scroll">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Choose Your Difficulty</h2>
+        <div class="grid grid-3">
+          <div class="card" style="border-top: 4px solid var(--success-color);">
+            <h3>🌟 Beginner</h3>
+            <p>Perfect for young learners</p>
+            <ul style="font-size: 0.9rem; color: var(--text-secondary);">
+              <li>Addition & Subtraction</li>
+              <li>Numbers 1-20</li>
+              <li>Steady fall speed</li>
+            </ul>
+          </div>
+          
+          <div class="card" style="border-top: 4px solid var(--warning-color);">
+            <h3>⚡ Moderate</h3>
+            <p>For improving math skills</p>
+            <ul style="font-size: 0.9rem; color: var(--text-secondary);">
+              <li>Numbers 1-50</li>
+              <li>Increasing gravity</li>
+              <li>More challenge</li>
+            </ul>
+          </div>
+          
+          <div class="card" style="border-top: 4px solid var(--secondary-color);">
+            <h3>🔥 Hard</h3>
+            <p>Ultimate math challenge</p>
+            <ul style="font-size: 0.9rem; color: var(--text-secondary);">
+              <li>All operations</li>
+              <li>Numbers up to 100</li>
+              <li>Rapid gravity scaling</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Final CTA -->
+      <div style="text-align: center; margin-top: 4rem; padding: 3rem; background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%); border-radius: 20px;" class="animate-on-scroll">
+        <h2>Ready to Test Your Math Skills?</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem;">Jump into Free Fall and make learning math an adventure!</p>
+        <a href="https://hytopia.com/games/freefall/" class="btn btn-primary" target="_blank" style="font-size: 1.2rem;">
+          Launch Free Fall
+        </a>
+      </div>
+    </div>
+  </section>
 </main>
 
+<script src="script.js"></script>
 </body>
 </html>
