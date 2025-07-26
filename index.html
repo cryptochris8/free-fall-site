@@ -1,69 +1,240 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Free Fall</title>
-  <style>
-    body {
-      background-color: #121212;
-      color: #ffffff;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-    }
-    nav {
-      background: #1e1e1e;
-      padding: 10px 0;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-    }
-    nav a {
-      color: #00bfff;
-      text-decoration: none;
-      font-size: 1.1rem;
-    }
-    nav a:hover {
-      color: #66d9ff;
-    }
-    main {
-      margin: 40px auto;
-      padding: 20px;
-      width: 90%;
-      max-width: 800px;
-      text-align: center;
-    }
-    h1 {
-      margin-top: 20px;
-      font-size: 2.5rem;
-    }
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free Fall - An exciting educational math adventure game. Dive through the skies solving arithmetic challenges in this thrilling voxel-based learning experience.">
+  <title>Free Fall - Math Adventure Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <nav>
-  <a href="/index.html">Home</a>
-  <a href="/about.html">About</a>
-  <a href="/how-to-play.html">How to Play</a>
-  <a href="/lesson-plans.html">Lesson Plans</a>
-  <a href="/media.html">Media</a>
-  <a href="/contact.html">Contact</a>
+  <div class="nav-container">
+    <a href="/" class="nav-logo">
+      <img src="freefall-logo.png" alt="Free Fall Logo">
+      <span>Free Fall</span>
+    </a>
+    <div class="nav-links">
+      <a href="#home" class="active">Home</a>
+      <a href="#features">Features</a>
+      <a href="#game-modes">Game Modes</a>
+      <a href="#education">Education</a>
+      <a href="media.html">Media</a>
+      <a href="lesson-plans.html">Resources</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
 </nav>
 
 <main>
-  <h1>Welcome to Free Fall!</h1>
-  
-        <img src="freefall-logo.png" alt="Free Fall Logo" style="margin-top:20px;width:300px;"><br><br>
-        <p>Engaging arithmetic adventure. Start playing or explore lesson plans below!</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/rU0u6ZqI5oI" title="Free Fall Gameplay" frameborder="0" allowfullscreen></iframe>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-background">
+      <iframe class="hero-video" src="https://www.youtube.com/embed/rU0u6ZqI5oI?autoplay=1&mute=1&loop=1&playlist=rU0u6ZqI5oI&controls=0&showinfo=0&modestbranding=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">Free Fall</h1>
+      <p class="hero-subtitle">Where Math Meets Adventure in the Sky!</p>
+      <p class="hero-description">Dive through colorful voxel tunnels, solve arithmetic challenges, and master math skills in this thrilling educational game.</p>
+      <div class="hero-buttons">
+        <a href="how-to-play.html" class="btn btn-primary">Play Now</a>
+        <a href="#features" class="btn btn-secondary">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="section">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">Game Features</h2>
+      <p class="section-subtitle animate-on-scroll">Experience math learning like never before with our innovative gameplay mechanics</p>
+      
+      <div class="grid grid-3">
+        <div class="card animate-on-scroll">
+          <div class="card-icon">🎯</div>
+          <h3 class="card-title">Physics-Based Learning</h3>
+          <p class="card-text">Control your fall through a vibrant tunnel while solving math problems. Navigate to the correct answer blocks as gravity pulls you down!</p>
+        </div>
         
+        <div class="card animate-on-scroll">
+          <div class="card-icon">🚀</div>
+          <h3 class="card-title">Progressive Difficulty</h3>
+          <p class="card-text">Start with simple addition and work your way up to complex multiplication and division. Gravity increases as you progress!</p>
+        </div>
+        
+        <div class="card animate-on-scroll">
+          <div class="card-icon">🎮</div>
+          <h3 class="card-title">Power-Up System</h3>
+          <p class="card-text">Collect 5 unique power-ups including slow motion, shields, magnets, double points, and rewind to enhance your gameplay.</p>
+        </div>
+        
+        <div class="card animate-on-scroll">
+          <div class="card-icon">🏆</div>
+          <h3 class="card-title">Achievement System</h3>
+          <p class="card-text">Unlock over 30 achievements ranging from speed challenges to perfect accuracy streaks. Track your progress and master every skill!</p>
+        </div>
+        
+        <div class="card animate-on-scroll">
+          <div class="card-icon">📱</div>
+          <h3 class="card-title">Cross-Platform Play</h3>
+          <p class="card-text">Optimized for both desktop and mobile devices. Play with keyboard controls or intuitive touch gestures anywhere!</p>
+        </div>
+        
+        <div class="card animate-on-scroll">
+          <div class="card-icon">🎵</div>
+          <h3 class="card-title">Immersive Audio</h3>
+          <p class="card-text">11 background music tracks and 200+ sound effects create an engaging atmosphere that enhances the learning experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Power-Ups Showcase -->
+  <section class="section" style="background: var(--bg-card);">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">Power-Up Collection</h2>
+      <p class="section-subtitle animate-on-scroll">Strategic power-ups to help you master the fall</p>
+      
+      <div class="powerup-grid">
+        <div class="powerup-item animate-on-scroll">
+          <div class="powerup-icon">❄️</div>
+          <h4>Slow Motion</h4>
+          <p>Reduce fall speed for precise movements</p>
+        </div>
+        
+        <div class="powerup-item animate-on-scroll">
+          <div class="powerup-icon">🛡️</div>
+          <h4>Shield</h4>
+          <p>Protection from wrong answers</p>
+        </div>
+        
+        <div class="powerup-item animate-on-scroll">
+          <div class="powerup-icon">🧲</div>
+          <h4>Magnet</h4>
+          <p>Auto-attract to correct answers</p>
+        </div>
+        
+        <div class="powerup-item animate-on-scroll">
+          <div class="powerup-icon">💎</div>
+          <h4>Double Points</h4>
+          <p>2x score multiplier</p>
+        </div>
+        
+        <div class="powerup-item animate-on-scroll">
+          <div class="powerup-icon">⏪</div>
+          <h4>Rewind</h4>
+          <p>Undo your last mistake</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Game Modes Section -->
+  <section id="game-modes" class="section">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">Choose Your Challenge</h2>
+      <p class="section-subtitle animate-on-scroll">Three difficulty modes designed for learners at every level</p>
+      
+      <div class="grid grid-3">
+        <div class="card animate-on-scroll" style="border-top: 4px solid var(--success-color);">
+          <h3 class="card-title">🌟 Beginner</h3>
+          <ul style="text-align: left; padding-left: 20px; color: var(--text-secondary);">
+            <li>Addition & Subtraction only</li>
+            <li>Numbers from 1-20</li>
+            <li>Steady fall speed</li>
+            <li>Perfect for young learners</li>
+          </ul>
+        </div>
+        
+        <div class="card animate-on-scroll" style="border-top: 4px solid var(--warning-color);">
+          <h3 class="card-title">⚡ Moderate</h3>
+          <ul style="text-align: left; padding-left: 20px; color: var(--text-secondary);">
+            <li>Extended number range (1-50)</li>
+            <li>Increasing gravity system</li>
+            <li>More complex problems</li>
+            <li>For improving skills</li>
+          </ul>
+        </div>
+        
+        <div class="card animate-on-scroll" style="border-top: 4px solid var(--secondary-color);">
+          <h3 class="card-title">🔥 Hard</h3>
+          <ul style="text-align: left; padding-left: 20px; color: var(--text-secondary);">
+            <li>All four operations</li>
+            <li>Numbers up to 100</li>
+            <li>Aggressive gravity scaling</li>
+            <li>Ultimate math challenge</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Educational Benefits -->
+  <section id="education" class="section" style="background: var(--bg-card);">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">Educational Excellence</h2>
+      <p class="section-subtitle animate-on-scroll">Designed by educators, loved by students</p>
+      
+      <div class="feature-box animate-on-scroll">
+        <div class="feature-content">
+          <h3>Comprehensive Curriculum</h3>
+          <p>Free Fall covers essential math topics including:</p>
+          <ul style="color: var(--text-secondary); margin-top: 1rem;">
+            <li>✓ Basic Arithmetic Operations</li>
+            <li>✓ Mental Math Speed Training</li>
+            <li>✓ Problem-Solving Under Pressure</li>
+            <li>✓ Pattern Recognition</li>
+            <li>✓ Quick Decision Making</li>
+          </ul>
+        </div>
+        <div class="feature-image">
+          <img src="Free Fall 1.png" alt="Free Fall Gameplay">
+        </div>
+      </div>
+      
+      <div class="feature-box animate-on-scroll">
+        <div class="feature-content">
+          <h3>Teacher Resources</h3>
+          <p>Complete educational package including:</p>
+          <ul style="color: var(--text-secondary); margin-top: 1rem;">
+            <li>📚 Detailed Lesson Plans</li>
+            <li>📝 Printable Worksheets</li>
+            <li>🧩 Logic Puzzles</li>
+            <li>📖 Story-Based Quests</li>
+            <li>🏅 Achievement Certificates</li>
+          </ul>
+          <a href="lesson-plans.html" class="btn btn-primary" style="margin-top: 1.5rem;">Download Resources</a>
+        </div>
+        <div class="feature-image">
+          <img src="Free Fall 2.png" alt="Educational Resources">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="section" style="background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);">
+    <div class="container" style="text-align: center;">
+      <h2 class="animate-on-scroll">Ready to Start Your Mathematical Adventure?</h2>
+      <p class="section-subtitle animate-on-scroll">Join thousands of students mastering math through play!</p>
+      <div class="hero-buttons animate-on-scroll">
+        <a href="how-to-play.html" class="btn btn-primary">Start Playing</a>
+        <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+      </div>
+    </div>
+  </section>
 </main>
 
+<script src="script.js"></script>
 </body>
 </html>

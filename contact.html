@@ -1,132 +1,162 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Free Fall - Get in touch with us for support, feedback, or educational partnerships.">
   <title>Contact - Free Fall</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   <style>
-    body {
-      background-color: #121212;
-      color: #ffffff;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
     }
-    nav {
-      background: #1e1e1e;
-      padding: 10px 0;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
+    .form-group {
+      margin-bottom: 1.5rem;
     }
-    nav a {
-      color: #00bfff;
-      text-decoration: none;
-      font-size: 1.1rem;
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+      font-weight: 500;
     }
-    nav a:hover {
-      color: #66d9ff;
-    }
-    main {
-      margin: 40px auto;
-      padding: 20px;
-      width: 90%;
-      max-width: 800px;
-    }
-    h1 {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-    form {
-      background: #1e1e1e;
-      padding: 20px;
-      margin-top: 30px;
-      border-radius: 8px;
-      display: flex;
-      flex-direction: column;
-    }
-    label {
-      margin-bottom: 15px;
-      display: flex;
-      flex-direction: column;
-      font-size: 1.2rem;
-    }
-    input, textarea {
-      margin-top: 8px;
-      padding: 10px;
-      border-radius: 5px;
-      border: none;
-      background: #2c2c2c;
-      color: #ffffff;
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 1rem;
+      background: var(--bg-card);
+      border: 2px solid transparent;
+      border-radius: 10px;
+      color: var(--text-primary);
       font-size: 1rem;
+      transition: var(--transition);
     }
-    button {
-      margin-top: 20px;
-      padding: 12px;
-      background-color: #007bff;
-      color: #ffffff;
-      font-size: 1.1rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      background: rgba(0, 191, 255, 0.05);
     }
-    button:hover {
-      background-color: #0056b3;
+    .form-group textarea {
+      min-height: 150px;
+      resize: vertical;
     }
   </style>
 </head>
 <body>
 
 <nav>
-  <a href="/index.html">Home</a>
-  <a href="/about.html">About</a>
-  <a href="/how-to-play.html">How to Play</a>
-  <a href="/lesson-plans.html">Lesson Plans</a>
-  <a href="/media.html">Media</a>
-  <a href="/contact.html">Contact</a>
+  <div class="nav-container">
+    <a href="/" class="nav-logo">
+      <img src="freefall-logo.png" alt="Free Fall Logo">
+      <span>Free Fall</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="how-to-play.html">How to Play</a>
+      <a href="lesson-plans.html">Resources</a>
+      <a href="media.html">Media</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+    <button class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
 </nav>
 
 <main>
-  <h1>Contact Us</h1>
-
-  <form name="contact" method="POST" data-netlify="true" onsubmit="showSuccess(event)">
-    <input type="hidden" name="form-name" value="contact">
-    
-    <label>Your Name:
-      <input type="text" name="name" required />
-    </label>
-    <label>Your Email:
-      <input type="email" name="email" required />
-    </label>
-    <label>Message:
-      <textarea name="message" rows="5" required></textarea>
-    </label>
-    <button type="submit">Send</button>
-  </form>
-
-  <script>
-    function showSuccess(event) {
-      event.preventDefault();
-      const form = event.target;
-      const data = new FormData(form);
-
-      fetch("/", {
-        method: "POST",
-        body: data
-      }).then(() => {
-        alert("✅ Thank you! Your message has been submitted.");
-        form.reset();
-      }).catch(() => {
-        alert("❌ Oops! Something went wrong. Please try again.");
-      });
-    }
-  </script>
-
+  <section class="section">
+    <div class="container">
+      <h1 class="section-title animate-on-scroll">Get in Touch</h1>
+      <p class="section-subtitle animate-on-scroll">We'd love to hear from you!</p>
+      
+      <div class="grid grid-2" style="gap: 4rem; align-items: start;">
+        <div class="animate-on-scroll">
+          <div class="card">
+            <h2>Contact Information</h2>
+            <p>Have questions about Free Fall? Want to implement it in your classroom? Looking for support? We're here to help!</p>
+            
+            <div style="margin-top: 2rem;">
+              <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">Ways to Reach Us:</h3>
+              <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
+                  <span style="font-size: 1.5rem;">📧</span>
+                  <div>
+                    <strong>Email Support</strong><br>
+                    <span style="color: var(--text-secondary);">For general inquiries and support</span>
+                  </div>
+                </li>
+                <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
+                  <span style="font-size: 1.5rem;">🏫</span>
+                  <div>
+                    <strong>Educational Partnerships</strong><br>
+                    <span style="color: var(--text-secondary);">Bulk licensing and school programs</span>
+                  </div>
+                </li>
+                <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
+                  <span style="font-size: 1.5rem;">💡</span>
+                  <div>
+                    <strong>Feature Requests</strong><br>
+                    <span style="color: var(--text-secondary);">Share your ideas to improve Free Fall</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            
+            <div style="margin-top: 2rem; padding: 1.5rem; background: var(--bg-dark); border-radius: 10px;">
+              <h4 style="margin-bottom: 0.5rem;">Response Time</h4>
+              <p style="color: var(--text-secondary); margin: 0;">We typically respond within 24-48 hours during business days.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="animate-on-scroll">
+          <div class="card">
+            <h2>Send Us a Message</h2>
+            <form class="contact-form" id="contact-form" name="contact" method="POST" data-netlify="true" action="/thank-you.html">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required placeholder="Tell us how we can help you..."></textarea>
+              </div>
+              
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <div style="margin-top: 4rem; text-align: center;" class="animate-on-scroll">
+        <div class="card" style="display: inline-block; padding: 2rem 3rem;">
+          <h3>Join Our Community</h3>
+          <p style="margin-bottom: 1.5rem;">Stay updated with the latest Free Fall news, updates, and educational resources.</p>
+          <a href="#" class="btn btn-secondary">Subscribe to Newsletter</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
+<script src="script.js"></script>
 </body>
 </html>

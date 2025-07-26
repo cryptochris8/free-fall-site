@@ -1,68 +1,131 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Media</title>
-  <style>
-    body {
-      background-color: #121212;
-      color: #ffffff;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-    }
-    nav {
-      background: #1e1e1e;
-      padding: 10px 0;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-    }
-    nav a {
-      color: #00bfff;
-      text-decoration: none;
-      font-size: 1.1rem;
-    }
-    nav a:hover {
-      color: #66d9ff;
-    }
-    main {
-      margin: 40px auto;
-      padding: 20px;
-      width: 90%;
-      max-width: 800px;
-      text-align: center;
-    }
-    h1 {
-      margin-top: 20px;
-      font-size: 2.5rem;
-    }
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free Fall Media Gallery - Screenshots, videos, and gameplay footage of the educational math adventure game.">
+  <title>Media Gallery - Free Fall</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <nav>
-  <a href="/index.html">Home</a>
-  <a href="/about.html">About</a>
-  <a href="/how-to-play.html">How to Play</a>
-  <a href="/lesson-plans.html">Lesson Plans</a>
-  <a href="/media.html">Media</a>
-  <a href="/contact.html">Contact</a>
+  <div class="nav-container">
+    <a href="/" class="nav-logo">
+      <img src="freefall-logo.png" alt="Free Fall Logo">
+      <span>Free Fall</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#features">Features</a>
+      <a href="index.html#game-modes">Game Modes</a>
+      <a href="index.html#education">Education</a>
+      <a href="media.html" class="active">Media</a>
+      <a href="lesson-plans.html">Resources</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
 </nav>
 
 <main>
-  <h1>Media Gallery</h1>
-  
-        <img src="Free Fall 1.png" width="200"><img src="Free Fall 2.png" width="200"><br><br>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/rU0u6ZqI5oI" title="Free Fall Gameplay" frameborder="0" allowfullscreen></iframe>
+  <section class="section">
+    <div class="container">
+      <h1 class="section-title animate-on-scroll">Media Gallery</h1>
+      <p class="section-subtitle animate-on-scroll">Experience Free Fall through screenshots and gameplay videos</p>
+      
+      <!-- Video Section -->
+      <div style="margin-bottom: 4rem;">
+        <h2 style="text-align: center; margin-bottom: 2rem;" class="animate-on-scroll">Gameplay Videos</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item animate-on-scroll" data-video="https://www.youtube.com/embed/rU0u6ZqI5oI">
+            <img src="Free Fall 1.png" alt="Free Fall Gameplay Demo">
+            <div class="gallery-overlay">
+              <div class="play-button">▶</div>
+            </div>
+          </div>
+          
+          <div class="gallery-item animate-on-scroll">
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 20px;">
+              <iframe 
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                src="https://www.youtube.com/embed/rU0u6ZqI5oI" 
+                title="Free Fall Full Gameplay" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Screenshots Section -->
+      <h2 style="text-align: center; margin-bottom: 2rem;" class="animate-on-scroll">Game Screenshots</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item animate-on-scroll">
+          <img src="Free Fall 1.png" alt="Free Fall - Tunnel Descent">
+          <div class="gallery-overlay">
+            <p style="color: white; font-weight: 600;">Tunnel Descent Gameplay</p>
+          </div>
+        </div>
         
+        <div class="gallery-item animate-on-scroll">
+          <img src="Free Fall 2.png" alt="Free Fall - Math Challenge">
+          <div class="gallery-overlay">
+            <p style="color: white; font-weight: 600;">Math Problem Solving</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item animate-on-scroll">
+          <img src="25E328FF-4FEB-4E9E-8283-F50FD5C82C0B.png" alt="Free Fall - Game Feature">
+          <div class="gallery-overlay">
+            <p style="color: white; font-weight: 600;">Special Game Feature</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Feature Highlights -->
+      <div style="margin-top: 4rem;">
+        <h2 style="text-align: center; margin-bottom: 2rem;" class="animate-on-scroll">Visual Features</h2>
+        <div class="grid grid-3">
+          <div class="card animate-on-scroll">
+            <div class="card-icon">🎨</div>
+            <h3 class="card-title">Vibrant Voxel Art</h3>
+            <p class="card-text">Colorful numbered blocks and dynamic tunnel environments create an engaging visual experience.</p>
+          </div>
+          
+          <div class="card animate-on-scroll">
+            <div class="card-icon">✨</div>
+            <h3 class="card-title">Particle Effects</h3>
+            <p class="card-text">Beautiful particle trails and destruction effects make every action feel impactful.</p>
+          </div>
+          
+          <div class="card animate-on-scroll">
+            <div class="card-icon">🌈</div>
+            <h3 class="card-title">Dynamic Environments</h3>
+            <p class="card-text">Multiple themed backgrounds including cave, desert, jungle, snow, and space settings.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Call to Action -->
+      <div style="text-align: center; margin-top: 4rem;" class="animate-on-scroll">
+        <h3>Want to see more?</h3>
+        <p class="section-subtitle">Experience Free Fall yourself and create your own epic moments!</p>
+        <a href="how-to-play.html" class="btn btn-primary">Play Free Fall Now</a>
+      </div>
+    </div>
+  </section>
 </main>
 
+<script src="script.js"></script>
 </body>
 </html>

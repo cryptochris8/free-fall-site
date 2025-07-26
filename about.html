@@ -1,73 +1,114 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Free Fall - Learn about our innovative educational math adventure game that combines learning with exciting gameplay.">
   <title>About - Free Fall</title>
-  <style>
-    body {
-      background-color: #121212;
-      color: #ffffff;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    nav {
-      background: #1e1e1e;
-      padding: 10px 0;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-    }
-    nav a {
-      color: #00bfff;
-      text-decoration: none;
-      font-size: 1.1rem;
-    }
-    nav a:hover {
-      color: #66d9ff;
-    }
-    main {
-      margin: 40px auto;
-      padding: 20px;
-      width: 90%;
-      max-width: 800px;
-      background-color: #1e1e1e;
-      border-radius: 8px;
-    }
-    h1 {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <nav>
-  <a href="/index.html">Home</a>
-  <a href="/about.html">About</a>
-  <a href="/how-to-play.html">How to Play</a>
-  <a href="/lesson-plans.html">Lesson Plans</a>
-  <a href="/media.html">Media</a>
-  <a href="/contact.html">Contact</a>
+  <div class="nav-container">
+    <a href="/" class="nav-logo">
+      <img src="freefall-logo.png" alt="Free Fall Logo">
+      <span>Free Fall</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="how-to-play.html">How to Play</a>
+      <a href="lesson-plans.html">Resources</a>
+      <a href="media.html">Media</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
 </nav>
 
 <main>
-  <h1>About Free Fall</h1>
-  <p>Welcome to Free Fall, an exciting educational journey through the skies! In this thrilling math adventure, you'll dive through a vibrant tunnel filled with colorful voxel cubes, each displaying numbers to test your arithmetic skills. As you begin your descent, look to the top of the screen to see math questions appear. Quickly identify the correct answer among the four numbered cubes below and aim your fall toward it!</p>
-
-  <p>You’ll face a total of 10 arithmetic challenges, including addition, subtraction, multiplication, and division. Keep sharp and stay focused to ensure you select the correct answer each time. Your reward? Safely landing at the surface after successfully completing all 10 questions!</p>
-
-  <p>Perfect for children learning math fundamentals, Free Fall combines the thrill of skydiving with interactive problem-solving to make math exciting and fun. Strap in, jump out, and enjoy the mathematical ride of your life!</p>
+  <section class="section">
+    <div class="container">
+      <h1 class="section-title animate-on-scroll">About Free Fall</h1>
+      <p class="section-subtitle animate-on-scroll">Where Education Meets Adventure</p>
+      
+      <div class="card animate-on-scroll" style="max-width: 800px; margin: 0 auto 3rem;">
+        <p style="font-size: 1.2rem; line-height: 1.8; color: var(--text-primary);">
+          Welcome to Free Fall, an exciting educational journey through the skies! In this thrilling math adventure, you'll dive through a vibrant tunnel filled with colorful voxel cubes, each displaying numbers to test your arithmetic skills.
+        </p>
+      </div>
+      
+      <div class="grid grid-2" style="gap: 3rem; margin-bottom: 4rem;">
+        <div class="animate-on-scroll">
+          <h2>The Game Experience</h2>
+          <p>As you begin your descent, look to the top of the screen to see math questions appear. Quickly identify the correct answer among the four numbered cubes below and aim your fall toward it!</p>
+          <p>You'll face a total of 10 arithmetic challenges, including addition, subtraction, multiplication, and division. Keep sharp and stay focused to ensure you select the correct answer each time.</p>
+          <p>Your reward? Safely landing at the surface after successfully completing all 10 questions!</p>
+        </div>
+        
+        <div class="animate-on-scroll">
+          <img src="Free Fall 1.png" alt="Free Fall Gameplay" style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-lg);">
+        </div>
+      </div>
+      
+      <div class="feature-box animate-on-scroll">
+        <div class="feature-content">
+          <h2>Educational Impact</h2>
+          <p>Perfect for children learning math fundamentals, Free Fall combines the thrill of skydiving with interactive problem-solving to make math exciting and fun.</p>
+          <ul style="color: var(--text-secondary); margin-top: 1rem;">
+            <li>✓ Improves mental math speed</li>
+            <li>✓ Builds confidence in arithmetic</li>
+            <li>✓ Develops quick decision-making skills</li>
+            <li>✓ Makes learning enjoyable and memorable</li>
+            <li>✓ Tracks progress with achievements</li>
+          </ul>
+        </div>
+        <div class="feature-image">
+          <img src="Free Fall 2.png" alt="Educational Benefits">
+        </div>
+      </div>
+      
+      <div style="background: var(--bg-card); padding: 3rem; border-radius: 20px; margin-top: 3rem;" class="animate-on-scroll">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Why Free Fall?</h2>
+        <div class="grid grid-3">
+          <div style="text-align: center;">
+            <div class="card-icon" style="margin: 0 auto 1rem;">🎯</div>
+            <h3>Engaging Gameplay</h3>
+            <p>Physics-based mechanics make every session unique and exciting</p>
+          </div>
+          <div style="text-align: center;">
+            <div class="card-icon" style="margin: 0 auto 1rem;">📈</div>
+            <h3>Adaptive Learning</h3>
+            <p>Three difficulty modes ensure appropriate challenges for all skill levels</p>
+          </div>
+          <div style="text-align: center;">
+            <div class="card-icon" style="margin: 0 auto 1rem;">🏅</div>
+            <h3>Proven Results</h3>
+            <p>Students show improved math scores and increased enthusiasm for learning</p>
+          </div>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: 4rem;" class="animate-on-scroll">
+        <h3>Ready to Transform Math Learning?</h3>
+        <p class="section-subtitle">Strap in, jump out, and enjoy the mathematical ride of your life!</p>
+        <div class="hero-buttons">
+          <a href="how-to-play.html" class="btn btn-primary">Start Playing</a>
+          <a href="lesson-plans.html" class="btn btn-secondary">Teacher Resources</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
+<script src="script.js"></script>
 </body>
 </html>

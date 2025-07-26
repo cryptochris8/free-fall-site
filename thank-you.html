@@ -1,52 +1,70 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thank you for contacting Free Fall. We'll get back to you soon!">
   <title>Thank You - Free Fall</title>
-  <style>
-    body {
-      margin: 0;
-      background-color: #121212;
-      color: #EEEEEE;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px 20px;
-    }
-    h1 {
-      font-size: 2.5em;
-      color: #00d8ff;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 1.2em;
-      margin-bottom: 30px;
-    }
-    a {
-      color: #00d8ff;
-      text-decoration: underline;
-      font-weight: bold;
-    }
-    a:hover {
-      color: #00b3cc;
-    }
-    footer {
-      margin-top: 50px;
-      color: #AAAAAA;
-      font-size: 0.9em;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <h1>Thank You!</h1>
-  <p>Your message has been received. We’ll get back to you as soon as possible!</p>
-  <p><a href="index.html">Return to Homepage</a></p>
+<nav>
+  <div class="nav-container">
+    <a href="/" class="nav-logo">
+      <img src="freefall-logo.png" alt="Free Fall Logo">
+      <span>Free Fall</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="how-to-play.html">How to Play</a>
+      <a href="lesson-plans.html">Resources</a>
+      <a href="media.html">Media</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
 
-  <footer>
-    © 2025 Free Fall. All rights reserved.
-  </footer>
+<main>
+  <section class="section">
+    <div class="container" style="text-align: center;">
+      <div class="card animate-on-scroll" style="max-width: 600px; margin: 0 auto; padding: 4rem;">
+        <div class="card-icon" style="margin: 0 auto 2rem; width: 80px; height: 80px; font-size: 2.5rem;">✅</div>
+        <h1 style="margin-bottom: 1rem;">Thank You!</h1>
+        <p style="font-size: 1.2rem; color: var(--text-primary); margin-bottom: 1.5rem;">
+          Your message has been successfully sent.
+        </p>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+          We appreciate you reaching out to us. Our team will review your message and get back to you within 24-48 hours.
+        </p>
+        
+        <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
+          <p style="margin-bottom: 1.5rem;">While you wait, why not:</p>
+          <div class="hero-buttons">
+            <a href="media.html" class="btn btn-primary">View Game Media</a>
+            <a href="lesson-plans.html" class="btn btn-secondary">Explore Resources</a>
+          </div>
+        </div>
+      </div>
+      
+      <div style="margin-top: 3rem;" class="animate-on-scroll">
+        <a href="index.html" style="color: var(--primary-color); text-decoration: none;">
+          ← Back to Home
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
 
+<script src="script.js"></script>
 </body>
 </html>
